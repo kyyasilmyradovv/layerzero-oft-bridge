@@ -12,7 +12,6 @@ async function main() {
     mockLzEndpoint
   );
 
-  // In ethers v6, wait for the transaction to be mined
   await simpleOFT.waitForDeployment();
 
   // Get the deployed contract address

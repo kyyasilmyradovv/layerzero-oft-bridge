@@ -18,7 +18,6 @@ const GET_BRIDGE_HISTORY = gql`
   }
 `;
 
-// The URL of your subgraph
 const SUBGRAPH_URL = 'http://localhost:8000/subgraphs/name/simple-oft';
 
 export const getBridgeHistory = async (req: Request, res: Response) => {
@@ -53,7 +52,6 @@ export const getBridgeHistory = async (req: Request, res: Response) => {
 
       res.json(formattedHistory);
     } catch (subgraphError) {
-      // Log the error
       console.error('Subgraph error:', subgraphError);
 
       // Return empty array if subgraph fails

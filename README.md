@@ -106,20 +106,24 @@ layerzero-ofr-project
 
 ### Testing
 
-To run the tests for the smart contract, navigate to the tests directory and run:
+To run the tests run:
 
 ```
-cd tests
 npx hardhat test
 ```
 
-### Bonus Points
+### NOTE by Dev !important
 
-If time permits, consider adding:
+The logic and the implementation is running on my end.
+If you face any problem with the initialization or if any functionality is not working or behaving as it is expected, please share with me, becasue things are working on my end and maybe some pavkage versions or docker software could be problem as we are running on two different devices. I have also used older versions of some packages as this is test task & I dont want to loose time.
+So if there is any problem, I am willing to take a look & debug for it.
 
-- E2E integration tests with mock LayerZero endpoints.
-- Deployment of contracts to Sepolia and Base Goerli testnets.
+I admit that there are some small type errors on some 2-3 files, my head is just shaking :) They are working, but if you want that some type problems also to be fixed I could take a look again for them, after small brain refresh:)
 
-## License
+I have used LLM for:
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+- Writing clean readme documentation
+- Adding explainatory comments inside the code
+- Searching for best practice experiences related to my code parts
+- For some test functions
+- Bug fixing & debugging

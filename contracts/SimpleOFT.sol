@@ -5,8 +5,7 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "hardhat/console.sol";
 
-// This is a simplified version for the test
-// In a real implementation, you would use the actual LayerZero OFT contract
+// Simplified version
 contract SimpleOFT is ERC20, Ownable {
     address public lzEndpoint;
     
@@ -42,17 +41,12 @@ contract SimpleOFT is ERC20, Ownable {
         _mint(msg.sender, amount);
     }
     
-    /**
-     * @dev Initiates a cross-chain transfer by burning tokens on source chain
-     * @param amount The amount of tokens to transfer
-     * @param dstChainId The destination chain ID
-     */
     function bridgeTokens(uint256 amount, uint16 dstChainId) external {
         require(amount > 0, "Amount must be greater than zero");
         require(balanceOf(msg.sender) >= amount, "Insufficient balance");
         
         // In a real implementation, this would call the LayerZero endpoint
-        // For this test, we simply burn tokens and emit the event
+        // For this test, we simpli burn tokens and emit the event
         _burn(msg.sender, amount);
         
         emit Bridged(msg.sender, amount, dstChainId);

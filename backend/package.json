@@ -1,7 +1,7 @@
 {
   "name": "layerzero-ofr-project-backend",
   "version": "1.0.0",
-  "description": "Backend for LayerZero Omnichain Token Transfer project",
+  "description": "Backend for LayerZero Omnichain Token Transfer project (dev Kyyas Ilmyradov)",
   "main": "src/app.ts",
   "scripts": {
     "build": "tsc",

@@ -10,7 +10,6 @@ describe('SimpleOFT Contract', function () {
   let mockLzEndpoint: string;
 
   beforeEach(async function () {
-    // Get signers
     [owner, user] = await ethers.getSigners();
 
     // Deploy a mock LZ endpoint address (just using a non-zero address)
@@ -103,7 +102,7 @@ describe('SimpleOFT Contract', function () {
     });
 
     it('should revert if trying to bridge more tokens than balance', async function () {
-      const excessAmount = ethers.parseUnits('200', 18); // More than the 100 minted
+      const excessAmount = ethers.parseUnits('200', 18);
       await expect(
         simpleOFT.connect(user).bridgeTokens(excessAmount, dstChainId)
       ).to.be.revertedWith('Insufficient balance');
