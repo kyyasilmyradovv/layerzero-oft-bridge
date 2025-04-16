@@ -1,0 +1,23 @@
+type BridgeTransfer @entity(immutable: true) {
+  id: ID!
+  user: Bytes!
+  amount: BigInt!
+  dstChainId: Int!
+  timestamp: BigInt!
+}
+
+type Token @entity(immutable: false) {
+  id: ID!
+  name: String!
+  symbol: String!
+  totalSupply: BigInt!
+  txCount: BigInt!
+}
+
+type Transfer @entity(immutable: true) {
+  id: ID!
+  from: Bytes!
+  to: Bytes!
+  amount: BigInt!
+  timestamp: BigInt!
+}
