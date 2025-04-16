@@ -40,9 +40,32 @@ layerzero-ofr-project
 ### Prerequisites
 
 - Node.js (version 14 or higher)
-- npm or yarn
+- npm (version 8 or higher)
+- Docker and Docker Compose (for running Graph Node and related services)
 - Hardhat
 - MetaMask or WalletConnect for frontend wallet connection
+
+### Docker Setup
+
+The project uses Docker containers for running the Graph Node, IPFS, and Postgres:
+
+1. Install Docker and Docker Compose:
+
+   - Docker Desktop for Mac/Windows
+   - Or Docker Engine and Docker Compose for Linux
+
+2. Start the Docker services:
+
+   ```
+   docker compose up -d
+   ```
+
+3. Verify containers are running:
+   ```
+   docker ps
+   ```
+
+You should see containers for graph-node, ipfs, and postgres running.
 
 ### Installation
 
